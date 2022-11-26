@@ -43,7 +43,7 @@ jobs:
 
       - name: Push image to AWS Lightsail
         env:
-          DATE_TIME: ${{ github.event.repository.updated_at }} | sed 's|:|-|g'
+          DATE_TIME: echo "${{ github.event.repository.updated_at }} | sed 's|:|-|g'"
         run: |
           aws lightsail push-container-image \
            --region ap-southeast-1 \
