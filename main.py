@@ -17,3 +17,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 @app.post("/items/{item_id}")
 def create_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+
+
+# q: how to use sed to replace : with -
+# sed -i 's/:/-/g' main.py
