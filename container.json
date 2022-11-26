@@ -1,0 +1,27 @@
+{
+  "containers": {
+    "app": {
+      "image": "",
+      "environment": {
+        "APP_ENV": "release",
+        "NODE_ENV": "development",
+        "MORE_ENV_VARS": "here"
+      },
+      "ports": {
+        "8000": "HTTP"
+      }
+    }
+  },
+  "publicEndpoint": {
+    "containerName": "app",
+    "containerPort": 8000,
+    "healthCheck": {
+      "healthyThreshold": 2,
+      "unhealthyThreshold": 2,
+      "timeoutSeconds": 5,
+      "intervalSeconds": 10,
+      "path": "/",
+      "successCodes": "200"
+    }
+  }
+}
