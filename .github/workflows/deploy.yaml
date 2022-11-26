@@ -46,7 +46,7 @@ jobs:
           aws lightsail push-container-image \
            --region ap-southeast-1 \
            --service-name article-github-actions-lightsail \
-           --label ${{ env.DATE_TIME }}-release 
+           --label ${{ env.DATE_TIME }}-release \
            --image article-github-actions-lightsail:release
 
       - name: Deploy to AWS Lightsail
